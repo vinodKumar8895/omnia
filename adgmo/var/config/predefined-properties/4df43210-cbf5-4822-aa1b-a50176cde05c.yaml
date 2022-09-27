@@ -1,0 +1,15 @@
+pimcore:
+    properties:
+        predefined:
+            definitions:
+                4df43210-cbf5-4822-aa1b-a50176cde05c:
+                    name: 'Portal Engine - Navigation Root'
+                    description: null
+                    key: portal-engine_navigation-root
+                    type: document
+                    data: null
+                    config: null
+                    ctype: document
+                    inheritable: true
+                    creationDate: 1661836804
+                    modificationDate: 1661836804

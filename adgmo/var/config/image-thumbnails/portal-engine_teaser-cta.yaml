@@ -1,0 +1,28 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    portal-engine_teaser-cta:
+                        items:
+                            -
+                                method: cover
+                                arguments:
+                                    width: 730
+                                    height: 408
+                                    forceResize: true
+                                    positioning: center
+                        medias: {  }
+                        name: portal-engine_teaser-cta
+                        description: ''
+                        group: 'Portal Engine'
+                        format: SOURCE
+                        quality: 85
+                        highResolution: null
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: false
+                        downloadable: false
+                        modificationDate: 1661836804
+                        creationDate: 1661836804
+                        preserveAnimation: false

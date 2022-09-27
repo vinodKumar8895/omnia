@@ -1,0 +1,14 @@
+pimcore:
+    documents:
+        doc_types:
+            definitions:
+                f45c69db-f4f9-446c-95de-655f72c784af:
+                    name: 'Portal Engine - Footer Snippet'
+                    group: 'Portal Engine'
+                    controller: 'Pimcore\Bundle\PortalEngineBundle\Controller\SnippetController::footerAction'
+                    template: null
+                    type: snippet
+                    priority: 0
+                    creationDate: 1661836804
+                    modificationDate: 1661836804
+                    staticGeneratorEnabled: null

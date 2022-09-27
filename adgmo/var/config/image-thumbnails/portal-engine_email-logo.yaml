@@ -1,0 +1,25 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    portal-engine_email-logo:
+                        items:
+                            -
+                                method: scaleByHeight
+                                arguments:
+                                    height: 42
+                        medias: {  }
+                        name: portal-engine_email-logo
+                        description: ''
+                        group: 'Portal Engine'
+                        format: png
+                        quality: 85
+                        highResolution: null
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: true
+                        downloadable: false
+                        modificationDate: 1661836804
+                        creationDate: 1661836804
+                        preserveAnimation: false

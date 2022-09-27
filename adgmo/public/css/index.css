@@ -1,0 +1,101 @@
+@import url("http://fonts.cdnfonts.com/css/graphik");
+
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family: "Graphik", sans-serif;
+}
+
+body {
+    background-color: white;
+}
+.header_main_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_flex {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.header_flex_profile_name {
+    width: 180px;
+    height: 57px;
+    overflow: hidden;
+    padding-right: 33px;
+    border-right: 1px solid #B0B0B0;
+}
+
+.header_main {
+    padding: 25px 25px;
+    background-color: white;
+}
+
+.header_span_bold_text {
+    color: #B0B0B0;
+}
+
+.header_flex_icons {
+    display: flex;
+    column-gap: 20px;
+    padding-left: 50px;
+}
+
+.header_flex_icon_imgage {
+    border: 1px solid #000;
+   display: grid;
+   place-content: center;
+   height: 40px;
+   width: 40px;
+    border-radius: 50%;
+}
+
+.requestFilter {
+    position: relative;
+}
+.requestFilter .searchInput,
+.searchInput:focus {
+    outline: none;
+    border-radius: 50px;
+    padding: 10px 17px;
+    border: none;
+    width: 0;
+}
+.requestFilter .searchInput.active {
+    border: 1px solid #000;
+    width: 100%;
+}
+
+.requestFilter .i-search {
+    position: absolute;
+    right: 0;
+    border: solid 1px rgb(0, 0, 0);
+    padding: 5px;
+    width: 2.3rem;
+    border-radius: 50px;
+}
+.requestFilter .i-border {
+    border: none;
+}
+
+.notifications_popup_header {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    right: 213px;
+}
+
+.header_flex_icon_imgage:hover .notifications_popup_header {
+    display: block;
+}

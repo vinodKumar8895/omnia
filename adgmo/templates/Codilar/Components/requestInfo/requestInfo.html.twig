@@ -1,0 +1,77 @@
+{% block reqInfo %}
+  {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/reqInfo.css') }}" />
+  {% endblock %}
+
+  <div class="infoWrapper">
+    <div class="topDetailes">
+      <div class="leftContent">
+        <div class="idNum">#89349843</div>
+        <div class="reqStatus">
+          <span class="dot"></span>
+          <span>in - progress</span>
+        </div>
+        <div class="reqPriority">
+          <span class="svgCnt"><img src="{{ asset('icons/arrow.png') }}" alt="icon" /></span>
+          <span>L2</span>
+        </div>
+        <div class="reqesterDetailes">
+          <span class="userPic">
+             {# <img src="{{ asset('imgages/user.png') }}" alt="user" /> #}
+             <span>SK</span>
+          </span>
+          <span class="userName">Assignee</span>
+        </div>
+      </div>
+      <div class="rightContent">
+        {% set data = [{ img: 'images/typeOf13.png' }, { img: 'images/typeOf12.png' }, { img: 'images/typeOf11.png' }, { img: 'images/typeOf10.png' }, { img: 'images/typeOf9.png' }, { img: 'images/typeOf8.png' }, { img: 'images/typeOf7.png' }] %}
+
+        <div class="avatars">
+          {% for obj in data %}
+            <div class="avatars__item">
+              <div class="avatars__image">
+                <img src="{{ asset(obj.img) }}" alt="user" />
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="avatarsTitle">
+          <span>Contributors</span>
+        </div>
+      </div>
+    </div>
+    <div class="bottomDetails">
+      <div class="topContent">
+        <div class="type">
+          <span class="type topLable">Type:</span>
+          <span class="tyep topValue">News</span>
+        </div>
+        <div class="dateCreated">
+          <span class="date topLable">Date Created:</span>
+          <span class="date topValue">12/06/2020</span>
+        </div>
+        <div class="due">
+          <span class="due topLable">Due Date:</span>
+          <span class="due topValue">12/06/2020</span>
+        </div>
+      </div>
+      <div class="bottomContent">
+        <div class="sector">
+          <span class="sector topLable">Sector:</span>
+          <span class="sector topValue">EWAA</span>
+        </div>
+        <div class="reqEntity">
+          <span class="req topLable">Requesting Entity:</span>
+          <span class="req topValue">Abu Dhabi Center</span>
+        </div>
+        <div class="timeRemain">
+          <span class="time topLable">Time Remaining:</span>
+          <span class="timeValue">
+            <span class="t-icon"><img src="{{ asset('icons/time-r.png') }}" alt="icon" /></span>
+            <span class="topValue">2:05:00</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

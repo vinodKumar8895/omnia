@@ -1,0 +1,49 @@
+.outerWrapper{
+    display: flex;
+    width: 315px;
+    height: 83px;
+    background-color: #FBFBFB;
+    padding: 16px;
+    cursor: pointer;
+}
+.outerWrapper > a {
+    width: 100%;
+}
+
+.typeWrapper {
+    width: 100%;
+    margin-left: 16px;
+}
+
+.uppercontent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.innerWrapper {
+    margin-bottom: 5px;
+}
+
+.uppercontent .request-type-lable {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #8c8c8c;
+    white-space: nowrap;
+}
+    
+.uppercontent .request-view a {
+    font-size: 16px;
+    color: #393939;
+}
+
+.lowercontent .request-title {
+    font-weight: 500;
+    font-size: 18px;
+}
+.innerContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

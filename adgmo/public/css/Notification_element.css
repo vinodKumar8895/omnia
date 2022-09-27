@@ -1,0 +1,44 @@
+.Notification_element_main_content_content_heading_div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.Notification_element_main_content_content_heading_text {
+    color: #8C8C8C;
+    font-size: 14px;
+}
+
+.Notification_element_main_content_content_heading_div_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Notification_element_main_content_content_heading_div_content_main {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.Notification_element_main_content_content {
+    background-color: white;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.Notification_element_main_content_content_heading_div_content_button {
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+}
+
+.Notification_element_main_content_content_heading_div_content_icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    background: #37474F;
+    color: white;
+}

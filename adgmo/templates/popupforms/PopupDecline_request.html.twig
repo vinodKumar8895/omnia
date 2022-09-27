@@ -1,0 +1,35 @@
+{% block stylesheets1 %}
+	<link href="{{ asset('css/Popup.css') }}" type="text/css" rel="stylesheet"/>
+
+{% endblock %}
+
+<div class="Popup_forms_main">
+
+	<div class="Popup_form_wrapper">
+
+		<div class="Popup_form_inner_wrapper">
+			<h2 class="Popup_form_inner_wrapper_accept_request">Decline Request</h2>
+
+			<img src="{{ asset('images/crossbutton.svg') }}" alt="">
+		</div>
+
+		<div class="popup_form_inner_wrapper_content">
+	
+
+			<div class="input_text_placeholder decline_place_holder">
+				<span class="label-txt">Add Notes</span>
+				<input class="form-input" type="text" placeholder="Placeholder text"/>
+			</div>
+
+			
+
+
+			
+		</div>
+
+		<div class="popup_form_submit_button">
+        <button class="popup_form_submit_button_button" type="submit">
+        Submit
+        </button>
+        </div>
+	</div>

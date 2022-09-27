@@ -1,0 +1,70 @@
+.NotifiPopup_Container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    padding: 23px 0;
+    width: 309px;
+    left: 100px;
+    top: 35px;
+    border-radius: 8px;
+    background: #FBFBFB;
+}
+.Notifi_Title h1{
+    margin: 0;
+    font-style: normal;
+    padding: 0 16px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+}
+.Notifi_Content{
+    background-color: #fff;
+}
+.Tagged_Notifi{
+    display: flex;
+    gap: 10px;
+    padding: 16px 0 16px 10px;
+    border-bottom: 1px solid #ECEFF1;
+}
+.Notifi_Mark{
+    width: 8px;
+    height: 8px;
+    background: #EA3F47;
+    border-radius: 50%;
+}
+.Notifi_Buttons{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.View_Btn button{
+    gap: 10px;
+    width: 130px;
+    height: 40px;
+    background: #37474F;
+    border-radius: 8px;
+    border: 1px solid #37474F;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.018em;
+    text-transform: capitalize;
+}
+.Settings_Btn button{
+    width: 130px;
+    height: 40px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #000;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.018em;
+    text-transform: capitalize;
+}

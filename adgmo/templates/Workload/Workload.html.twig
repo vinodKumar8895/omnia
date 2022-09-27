@@ -1,0 +1,100 @@
+{% extends "default_controller1/index.html.twig" %}
+{% block maincontent %}
+	{% block stylesheets1 %}
+		<link href="{{ asset('css/Content.css') }}" type="text/css" rel="stylesheet"/>
+		<link href="{{ asset('css/Workload.css') }}" type="text/css" rel="stylesheet"/>
+
+	{% endblock %}
+	<div class="Dashboard_body_main_content">
+
+
+		<div class="Dashboard_body_main_content_back_button">
+			<img src="{{ asset('images/leftvector.png') }}" class="Dashboard_left_arrow"/>
+		</div>
+
+		<div class="Dashboard_body_main_content_wrapper">
+			<div class="Dashboard_body_main_content_Date">
+				<div class="Dashboard_body_main_content_Date_span">
+					<span>
+						<img src="{{ asset('images/Back_arrow.svg') }}" alt="">
+					</span>
+					<span class="Worload_back_text">
+						Back
+					</span>
+				</div>
+
+				<div class="Workload_breadcrumbs">
+
+						{# <div class="my-breadcrumbs" id="firstP"> <a href="/homepage" class="directions-link">{{ 'Home'|trans }} > </a>
+					</div> #}
+
+			{{ include('Includes/Breadcrumbs.html.twig') }}
+
+
+				</div>
+			</div>
+			<div class="Dashboard_body_main_content_Profile_name">
+				<p class="Dashboard_body_main_content_Profile_span">Requests</p>
+			</div>
+
+			{{ include('Includes/Requestsbutton.html.twig') }}
+
+
+			{{ include('Includes/NewsFrame.html.twig') }}
+
+		</div>
+
+	</div>
+
+	<div class="Dashboard_main_content_table">
+		{% set heading = {'foo': 'All Requests'} %}
+		{% include "Includes/Dashboard_table.html.twig" with heading%}
+
+	</div>
+
+	{% block javascript4 %}
+		<script>
+
+			
+$(document).ready(function () {
+	console.log('jfsdfkj');
+
+
+var src1 = "{{ asset('images/leftvector.png') }}";
+var src2 = "{{ asset('images/rightarrow.png') }}";
+$(".Dashboard_body_main_content_back_button").click(function () {
+var src = $('.Dashboard_left_arrow').attr('src');
+if (src == src1) {
+$('.Dashboard_left_arrow').attr('src', src2);
+$('.dashboard_elements_span').css("display", "none");
+$('.dashboard_elements').css("justify-content", "unset");
+$('.dashboard_elements').css("width", "unset");
+$('.dashboard_elements').css("display", "grid");
+$('.dashboard_elements').css("place-content", "center");
+$('.right_arrow').css("display", "none");
+$('.dashboard_create_request_text_span').css("display", "none");
+
+
+} else {
+$('.Dashboard_left_arrow').attr('src', src1);
+$('.dashboard_elements_span').css("display", "block");
+$('.dashboard_elements').css("justify-content", "space-between");
+$('.dashboard_elements').css("width", "258px");
+$('.right_arrow').css("display", "block");
+$('.dashboard_create_request_text_span').css("display", "block");
+
+
+}
+
+
+});
+
+var $h3s = $('.Dashboard_body_main_content_Profile_buttons_myrequests').click(function () {
+$h3s.removeClass('workload_active');
+$(this).addClass('workload_active');
+});
+}
+);
+		</script>
+	{% endblock %}
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block styles %}
+    
+{% endblock %}
+
+{% block stylesheets %}
+        <link href="{{ asset('css/index.css') }}" type="text/css" rel="stylesheet" />
+    {% endblock %}
+
+{% block body %}
+
+<div class="header_main">
+
+
+
+        <div class="header_main_block">
+
+            <div class="header_flex">
+            <div class = "header_flex_image"> 
+           <img src = {{ asset('images/profileimage.png') }} />
+             </div>
+
+             <div class = "header_flex_profile_name"> 
+              <strong>Harrison </strong>, <span class = "header_span_bold_text">Abu Dhabi Sheltering and Humanit... arian Care - Ewaa
+             </div>
+
+             <div class = "header_flex_icons"> 
+
+             <div class = "header_flex_icon_imgage"> 
+             
+             <img src = {{ asset('images/shape.png') }} />
+             </div>
+
+             <div class = "header_flex_icon_imgage"> 
+             
+             <img src = {{ asset('images/Vector.png') }} />
+             </div>
+             <div class = "header_flex_icon_imgage"> 
+
+             <div class="notifications_popup_header">
+
+    {% include "Includes/NotificationsPopup.html.twig" %}
+
+</div>
+             
+             <img src = {{ asset('images/globe.svg') }} />
+
+
+             </div>
+             
+            
+             </div>
+
+            </div>
+
+            <div class="header_flex1">
+            <img src = {{ asset('images/ADGMOLOGO.png') }} />
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class = "body_content" id="Notifiyme_search1"> 
+    
+    <div class = "dashboard_main_block">
+    
+    {% include "Includes/dashboard.html.twig" %}
+     </div>
+
+     <div class = "dashboard_main_content">
+     {% block maincontent %}
+     {% block stylesheet1 %}{% endblock %}
+     {% block javascript_chart_library %}{% endblock %}
+     {% endblock %}
+      </div>
+    </div>
+
+
+    
+{% endblock %}
+
+

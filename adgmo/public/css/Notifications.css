@@ -1,0 +1,181 @@
+.Notification_search {
+    background: whitesmoke;
+    font-weight: bold;
+    z-index: 1;
+    border: none;
+    height: 50px;
+}
+
+.Notifications_content_wrapper_heading {
+    font-size: 28px;
+}
+
+.Notifications_content_wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.Notification_filter_and_search_ {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.Notification_mark_all_read {
+    padding: 13px 40px;
+    border-radius: 10px;
+    background: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.Notification_viewall {
+    padding: 11px 30px;
+    border: none;
+}
+
+.Notification_Settings {
+    padding: 11px 30px;
+    border: none;
+}
+
+.Notifications_viewall_settings {
+    display: flex;
+    column-gap: 10%;
+    border: 1px solid #DCDCDC;
+    padding: 8px;
+}
+
+.Notifications_main_content_element_day {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.select-container {
+    position: relative;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.select-container .select {
+    position: relative;
+    height: 60px;
+}
+
+.select-container .select::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 35%;
+    right: 15px;
+    transform: translateY(-50%) rotate(45deg);
+    border-bottom: 2px solid ;
+    border-right: 2px solid ;
+    cursor: pointer;
+    transition: border-color 0.4s;
+}
+
+.select-container.active1 .select::after {
+    border: none;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+}
+.select-container .select input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+    color: #000;
+    cursor: pointer;
+}
+.select-container .option-container {
+    position: relative;
+    height: 0;
+    overflow-y: scroll;
+    transition: 0.4s;
+}
+
+.select-container.active1 .option-container {
+    height: 360px;
+}
+
+.select-container .option-container::-webkit-scrollbar {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    width: 10px;
+}
+
+.select-container .option-container::-webkit-scrollbar-thumb {
+    background: #0f0e11;
+}
+
+.select-container .option-container .option {
+    position: relative;
+    padding-left: 15px;
+    height: 60px;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+    background: #ffff;
+    column-gap: 10px;
+}
+
+.select-container .option-container .option.selected {
+    background: #ffff;
+    pointer-events: none;
+}
+
+.select-container .option-container .option:hover {
+    padding-left: 20px;
+}
+
+.select-container .option-container .option label {
+    font-size: 1.1rem;
+    color: black;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.option-container::-webkit-scrollbar {
+    display: none;
+  }
+
+.Notification_apply_filter_button {
+    padding: 10px 10px;
+    width: 160px;
+    background: white;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.option1 {
+    display: grid;
+    place-content: center;
+}
+
+.Notifications_heading_text_placeholder {
+    list-style: none;
+    border: none;
+    background: none;
+    outline: none;
+    display: none;
+}
+
+.search {
+    display: flex;
+    padding: 10px;
+    column-gap: 10px;
+}
+
+.Notify_me_search_container {
+    display: none;
+}
+

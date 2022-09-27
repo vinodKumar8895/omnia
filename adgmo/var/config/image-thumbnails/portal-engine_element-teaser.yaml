@@ -1,0 +1,27 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    portal-engine_element-teaser:
+                        items:
+                            -
+                                method: contain
+                                arguments:
+                                    width: 294
+                                    height: 165
+                                    forceResize: false
+                        medias: {  }
+                        name: portal-engine_element-teaser
+                        description: ''
+                        group: 'Portal Engine'
+                        format: SOURCE
+                        quality: 85
+                        highResolution: null
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: false
+                        downloadable: false
+                        modificationDate: 1662458463
+                        creationDate: 1662458463
+                        preserveAnimation: false

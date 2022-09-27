@@ -1,0 +1,25 @@
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('css/requestType.css') }}"/>
+{% endblock %}
+
+{% block requestType %}
+	{% for obj in data %}
+		<div class="outerWrapper">
+			<a href="/createrequest">
+				<div class="innerContent">
+					<div class="imgWrapper">
+						<img src='{{asset(obj.img)}}' alt={{obj.img}}>
+					</div>
+					<div class="typeWrapper">
+
+
+						<div class="lowercontent">
+							<span class="request-title">{{ obj.type }}</span>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+
+	{% endfor %}
+{% endblock %}

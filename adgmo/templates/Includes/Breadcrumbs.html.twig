@@ -1,0 +1,32 @@
+<div class="my-breadcrumbs" id="firstP">
+	<a href="/homepage" class="directions-link">{{ 'Home'|trans }}
+		>
+	</a>
+</div>
+
+{% block javascript8 %}
+
+
+	<script>
+		const location123 = window.location.href.split('//');
+console.log(location123[1]);
+const location1234 = location123[1];
+const location12345 = location1234.split('/');
+console.log(location12345);
+
+$(document).ready(function () {
+for (var i = 1; i < location12345.length; i++) {
+var a = document.createElement('a');
+a.href = location12345[i];
+a.innerText = location12345[i] + '   >';
+a.className = 'directions-link';
+document.getElementById("firstP").appendChild(a);
+}
+
+});
+
+
+
+</script>
+
+		{% endblock %}

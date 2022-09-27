@@ -1,0 +1,27 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    portal-engine_detail-page:
+                        items:
+                            -
+                                method: contain
+                                arguments:
+                                    width: 600
+                                    height: 400
+                                    forceResize: false
+                        medias: {  }
+                        name: portal-engine_detail-page
+                        description: ''
+                        group: 'Portal Engine'
+                        format: SOURCE
+                        quality: 85
+                        highResolution: null
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: false
+                        downloadable: false
+                        modificationDate: 1662458463
+                        creationDate: 1662458463
+                        preserveAnimation: false

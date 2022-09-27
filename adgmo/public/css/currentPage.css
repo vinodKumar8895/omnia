@@ -1,0 +1,49 @@
+.currentPage {
+    width: 100%;
+    padding: 40px 0 30px 0;
+}
+.bc-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.back-svg {
+    display: flex;
+    gap:8px;    
+}
+
+.back-svg > *{
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+}
+.back-svg .b-svg{
+    height: 12px;
+    width: 13px;
+}
+.b-svg img{
+    object-fit: contain;
+    width: 100%;
+}
+
+
+.breadcrums ul {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.breadcrums ul li {
+    font-size: 16px;
+    font-weight: 400;
+    list-style: none;
+    cursor: pointer;
+}
+
+.breadcrums ul li:first-child {
+    text-decoration: underline;
+    color: #8c8c8c;
+}
+.breadcrums ul span:last-child {
+    display: none;
+}

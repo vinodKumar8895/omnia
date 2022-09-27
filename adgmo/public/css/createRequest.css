@@ -1,0 +1,89 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.CurrentPage {
+    background-color: transparent;
+}
+.pageTitle {
+    text-align: left;
+    margin-bottom: 44px;
+}
+.pageTitle strong {
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.requestWrapper {
+    background: #ffffff;
+    border: 1px solid #ededed;
+    border-radius: 12px;
+    padding-block: 50px;
+    padding-inline: 20px;
+}
+
+.requestTopcontent {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 26px;
+}
+
+.headding {
+    margin: 0;
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    display: block;
+}
+
+.requestFilter {
+    position: relative;
+}
+.requestFilter .searchInput,
+.searchInput:focus {
+    outline: none;
+    border-radius: 50px;
+    padding: 10px 17px;
+    border: none;
+    width: 0;
+}
+.requestFilter .searchInput.active {
+    border: 1px solid #000;
+    width: 100%;
+}
+
+.requestFilter .i-search {
+    position: absolute;
+    right: 0;
+    border: solid 1px rgb(0, 0, 0);
+    padding: 5px;
+    width: 2.3rem;
+    border-radius: 50px;
+}
+.requestFilter .i-border {
+    border: none;
+}
+
+.requestGridInner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 16px;
+    column-gap: 37px;
+}
+
+/* requestFilter css */
+
+.requestFilter select {
+    height: 48px;
+    width: 184px;
+    padding: 15px 10px;
+    border: none;
+}
+
+.requestFilter option {
+    padding: 15px 10px;
+}

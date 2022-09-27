@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+      <link rel="stylesheet" href="style.css" />
+      <title>
+        {% block title %}
+          MainLayout
+        {% endblock %}
+      </title>
+    {% endblock %}
+
+    {% block stylesheet %}
+      <link rel="stylesheet" href="{{ asset('css/myLayout.css') }}" />
+    {% endblock %}
+
+    {% block javascripts %}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"> </script>  
+    {% endblock %}
+  </head>
+  <body>
+    <div class="contentWrapper">
+      <div class="headerContent">
+        {% block HeaderContent %}
+          Header Content<div id="head">
+            <h1>{{ pimcore_input('headline') }}</h1>
+          </div>
+        {% endblock %}
+      </div>
+      <div class="aside">
+        {% block asideContent %}
+          Aside
+        {% endblock %}
+      </div>
+      <div class="mainContent">
+        {% block currentContent %}
+          {# {% include "Codilar/Components/CreateRequest/createrequest.html.twig" %} #}
+
+          {# {% include 'Codilar/Components/OverViewForm/overView.html.twig' %} #}
+          
+          
+        {% endblock %}
+      </div>
+    </div>
+    <div id="footer">
+      {% block footer %}
+        &copy; Copyright 2011 by
+        <a href="http://domain.invalid/">you</a>.
+      {% endblock %}
+    </div>
+  </body>
+</html>

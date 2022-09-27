@@ -1,0 +1,62 @@
+{% block stylesheets1 %}
+	<link href="{{ asset('css/Popup.css') }}" type="text/css" rel="stylesheet"/>
+
+{% endblock %}
+
+<div class="Popup_forms_main">
+
+	<div class="Popup_form_wrapper">
+
+		<div class="Popup_form_inner_wrapper">
+			<h2 class="Popup_form_inner_wrapper_accept_request">Accept Request</h2>
+
+			<img src="{{ asset('images/crossbutton.svg') }}" alt="">
+		</div>
+
+		<div class="popup_form_inner_wrapper_content">
+			<div>
+				<div>
+					<span class="label-txt">Priority</span>
+					<select class="form-control" id="supervisor">
+						<option class="heading-option">L2 - Important</option>
+						<option value="one" class="heading-option">One</option>
+						<option value="two" class="heading-option">Two</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="input_text_placeholder">
+				<span class="label-txt">Due Date*</span>
+				<input class="form-input" type="text" placeholder="Placeholder text"/>
+			</div>
+
+			<div>
+				<div>
+					<span class="label-txt">Confidentiality</span>
+					<select class="form-control" id="supervisor">
+						<option class="heading-option">Select option</option>
+						<option value="one" class="heading-option">One</option>
+						<option value="two" class="heading-option">Two</option>
+					</select>
+				</div>
+			</div>
+
+
+			<div class="accept_request_text_popup">
+				<div class="accept_request_text_image">
+					<img src="{{ asset('images/i-icon.svg') }}" alt="">
+				</div>
+				<div class="accept_request_text_contnet">
+					<p class="accept_request_text_content_text">
+
+						You are about accept this request, please note the due date is automatically defined by the Priority of the request.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup_form_submit_button">
+        <button class="popup_form_submit_button_button" type="submit">
+        Submit
+        </button>
+        </div>
+	</div>

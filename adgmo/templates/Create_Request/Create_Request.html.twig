@@ -1,0 +1,53 @@
+{% extends "default_controller1/index.html.twig" %}
+{% block maincontent %}
+	{% block stylesheets1 %}
+		<link href="{{ asset('css/Content.css') }}" type="text/css" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ asset('css/createRequest.css') }}" />
+
+
+	{% endblock %}
+	<div class="CurrentPage">
+
+    {% set breads = ['Home','Requests','Create Request'] %}
+  
+    {% include 'Codilar/Components/currentPage/currentPage.html.twig' with breads %}
+  
+  </div>
+  <div class="pageTitle">
+    <strong>Create Request</strong>
+  </div>
+ 
+  <div class="requestWrapper">
+    <div class="requestTopcontent">
+      <div class="info">
+        <strong class="headding" >Select type of request</strong>
+      </div>
+      <div class="requestFilter">
+        
+        <input type="text" class="searchInput" />
+        <span class="i-search" id='req-select-type'><img src="{{ asset('icons/search.png') }}" alt="icon" /></span>
+      </div>
+    </div>
+    <div class="requestGridOuter">
+      <div class="requestGridInner">
+        {% set data = [{ type: 'News', img: 'images/typeOf13.png', link: '#' }, { type: 'Circulars', img: 'images/typeOf12.png', link: '#' }, { type: 'Communication Plan', img: 'images/typeOf11.png', link: '#' }, { type: 'Media Consultation', img: 'images/typeOf10.png', link: '#' }, { type: 'Media Opportunities', img: 'images/typeOf9.png', link: '#' }, { type: 'International Media Opportunities', img: 'images/typeOf8.png', link: '#' }, { type: 'Patronage', img: 'images/typeOf7.png', link: '#' }, { type: 'AD Brand Consultation', img: 'images/typeOf6.png', link: '#' }, { type: 'Brand Consultation', img: 'images/typeOf5.png', link: '#' }, { type: 'New Brand Approval', img: 'images/typeOf4.png', link: '#' }, { type: 'Re-Branding Approval', img: 'images/typeOf3.png', link: '#' }, { type: 'Brand Assets Enquiries', img: 'images/typeOf2.png', link: '#' }, { type: 'Media Assets Archiving', img: 'images/typeOf1.png', link: '#' }, { type: 'Media Assets Enquiries', img: 'images/typeOf13.png', link: '#' }] %}
+
+        {% include 'Codilar/Components/RequestType/requestType.html.twig' with data %}
+      </div>
+    </div>
+  </div>
+
+    {% block javascript31 %}
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"> </script>  
+          <script>
+                $(document).ready(function () {
+            $('#req-select-type').on('click',function(){
+              $('.searchInput').toggleClass('active');
+              $(this).toggleClass('i-border');
+            })
+                })
+            </script>
+        {% endblock %}
+{% endblock %}

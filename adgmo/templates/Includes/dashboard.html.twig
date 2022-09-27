@@ -1,0 +1,161 @@
+{% extends 'base.html.twig' %}
+
+{% block styles %}{% endblock %}
+
+{% block stylesheets %}
+	<link href="{{ asset('css/dashboard.css') }}" type="text/css" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+
+	<div class="dashboard_main" id="myDIV">
+
+			<a href="/homepage">
+		<div class="dashboard_layouts">
+				<div class="dashboard_elements">
+					<div class="dashboard_elements1">
+						<img src="{{ asset('images/dashboardimage.svg') }}" class="dashboard_image"/>
+						<span class="dashboard_elements_span">
+							Dashboard</span>
+					</div>
+					<img src="{{ asset('images/rightarrow.png') }}" class="right_arrow"/>
+				</div>
+			{# {{ pimcore_render_nav(mainNavigation, 'breadcrumbs') }} #}
+		</div>
+			</a>
+
+			<div class="workload_inner_elements">
+        
+		<div class="dashboard_layouts">
+
+			<div class="dashboard_elements dashboard_elements_workload11">
+               <a href="/workload">
+				<div class="dashboard_elements1">
+					<img src="{{ asset('images/dashboardimage.svg') }}" class="dashboard_image"/>
+					<span class="dashboard_elements_span">
+						Workload</span>
+				</div>
+			   </a>
+				<img src="{{ asset('images/rightarrow.png') }}" class="right_arrow1"/>
+			</div>
+		</div>
+
+		<div class="dashboard_layouts dashboard_workload_hover_layout">
+
+			<div class="dashboard_element dashboard_elements_workload">
+
+				<div class="dashboard_elements1">
+					<span class="dashboard_elements_span">
+						Overview</span>
+				</div>
+				<img src="{{ asset('images/workloadplus.svg') }}" class="right_arrow"/>
+			</div>
+
+			<div class="dashboard_element dashboard_elements_workload">
+
+				<div class="dashboard_elements1">
+					<span class="dashboard_elements_span">
+						Attachments</span>
+				</div>
+				<img src="{{ asset('images/workloadplus.svg') }}" class="right_arrow"/>
+			</div>
+
+			<div class="dashboard_element dashboard_elements_workload">
+
+				<div class="dashboard_elements1">
+					<span class="dashboard_elements_span">
+						Deliverables</span>
+				</div>
+				<img src="{{ asset('images/workloadplus.svg') }}" class="right_arrow"/>
+			</div>
+
+			<div class="dashboard_element dashboard_elements_workload">
+
+				<div class="dashboard_elements1">
+					<span class="dashboard_elements_span">
+						Activity</span>
+				</div>
+				<img src="{{ asset('images/workloadplus.svg') }}" class="right_arrow"/>
+			</div>
+		</div>
+
+		</div>
+
+
+		
+
+		<div class="dashboard_layouts">
+			<div class="dashboard_elements">
+				<div class="dashboard_elements1">
+					<img src="{{ asset('images/dashboard_3.png') }}" class="dashboard_image1"/>
+					<span class="dashboard_elements_span">
+						Schedule</span>
+				</div>
+				<img src="{{ asset('images/rightarrow.png') }}" class="right_arrow"/>
+			</div>
+		</div>
+
+		<div class="dashboard_layouts">
+			<div class="dashboard_elements">
+				<div class="dashboard_elements1">
+					<img src="{{ asset('images/dashboard_4.png') }}" class="dashboard_image1"/>
+					<span class="dashboard_elements_span">
+						Asset Library</span>
+				</div>
+				<img src="{{ asset('images/rightarrow.png') }}" class="right_arrow"/>
+			</div>
+		</div>
+
+
+		<div class="dashboard_layouts">
+			<div class="dashboard_elements">
+				<div class="dashboard_elements1">
+					<img src="{{ asset('images/dashboard_5.png') }}" class="dashboard_image1"/>
+					<span class="dashboard_elements_span">
+						Our Standards</span>
+				</div>
+				<img src="{{ asset('images/rightarrow.png') }}" class="right_arrow"/>
+			</div>
+		</div>
+
+		<div class="dashboard_layouts">
+			<div class="dashboard_elements">
+				<div class="dashboard_elements1">
+					<img src="{{ asset('images/dashboard_5.png') }}" class="dashboard_image1"/>
+					<span class="dashboard_elements_span">
+						Reporting</span>
+				</div>
+				<img src="{{ asset('images/rightarrow.png') }}" class="right_arrow"/>
+			</div>
+		</div>
+<a href="/createrequestmain">
+		<div class="dashboard_create_request_button">
+			<span class="dashboard_create_request_text">
+				CREATE 
+				<span class="dashboard_create_request_text_span">
+				REQUEST
+
+				</span>
+			</span>
+		</div>
+	</div>
+	</a>
+
+	{% block javascript6 %}
+            <script>
+		$(document).ready(function() {
+			
+			$(".dashboard_elements_workload11").click(function () {
+    $(".dashboard_workload_hover_layout").toggle();
+	$(".right_arrow1").toggle();
+  });
+
+$(".dashboard_elements").click(function () {
+    $(".dashboard_elements").removeClass("active");
+    $(this).addClass("active"); 
+});
+});
+</script>
+        {% endblock %}
+
+{% endblock %}

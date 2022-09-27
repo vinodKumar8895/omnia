@@ -1,0 +1,27 @@
+{% block currentPage %}
+
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{asset('css/currentPage.css')}}">
+    {% endblock %}
+
+  <div class="currentPage">
+    <div class="bc-wrapper">
+    
+      <div class="back-svg">
+        <span class="b-svg"><img src="{{ asset('icons/arrow.png') }}" alt="back" /></span>
+        <span>Back</span>
+      </div>
+
+      <div class="breadcrums">
+        <ul>
+        {% for val in breads %} 
+          <li>{{val}}</li>
+          <span><img src="{{ asset('icons/bradcrums.png') }}" alt="icon" /></span>
+        {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

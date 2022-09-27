@@ -1,0 +1,191 @@
+{% extends "default_controller1/index.html.twig" %}
+{% block maincontent %}
+	{% block stylesheets1 %}
+		<link href="{{ asset('css/Content.css') }}" type="text/css" rel="stylesheet"/>
+		<link href="{{ asset('css/Notifications.css') }}" type="text/css" rel="stylesheet"/>
+	{% endblock %}
+	<div class="Dashboard_body_main_content">
+
+
+		<div class="Dashboard_body_main_content_back_button">
+			<img src="{{ asset('images/leftvector.png') }}" class="Dashboard_left_arrow"/>
+		</div>
+
+		<div class="Dashboard_body_main_content_wrapper">
+
+			<div class="Notifications_main_content">
+
+				<div class="Notifications_content_wrapper">
+
+					<h3 class="Notifications_content_wrapper_heading">
+
+						Notifications
+					</h3>
+
+					<div class="Notification_filter_and_search_">
+
+						<p class="Filterby">Filter by:</p>
+						<div class="Notification_search">
+							<div class="select-container">
+								<div class="select">
+									<input type="text" id="input" placeholder="select" onfocus="this.blur();">
+								</div>
+								<div class="option-container">
+									<div class="option">
+
+                                    <input type="checkbox"  name="vehicle1">
+										<label for="vehicle1">
+											All
+										</label>
+									</div>
+									<div class="option">
+                                    <input type="checkbox"  name="vehicle1">
+										<label for="vehicle1">Requests</label>
+									</div>
+									<div class="option">
+                                    <input type="checkbox"  name="vehicle1">
+										<label for="vehicle1">Comments</label>
+									</div>
+									<div class="option">
+                                    <input type="checkbox"  name="vehicle1">
+
+										<label for="vehicle1">Assests</label>
+									</div>
+
+                                    <div class="option">
+                                    <input type="checkbox"  name="vehicle1">
+
+										<label for="vehicle1">Schedule</label>
+									</div>
+
+                                    <div class="option1">
+                                    <button class="Notification_apply_filter_button">
+
+                                    Apply Filter
+                                    </button>
+									</div>
+
+                                    
+								</div>
+							</div>
+						</div>
+
+						<div class="Notification_search_icon">
+
+                        <div class='search' id="Notifiyme_search">
+    <div class='btn'>
+        <img src="images/shape.png" alt="">
+    </div>
+    <input type='text' placeholder='search...' class="Notifications_heading_text_placeholder" />
+</div>
+							
+						</div>
+
+						<button class="Notification_mark_all_read">
+							Mark all as read
+						</button>
+					</div>
+
+				</div>
+
+				<div class="Notifications_viewall_settings">
+					<button class="Notification_viewall">
+						All Notifications
+					</button>
+					<button class="Notification_Settings">
+						Settings
+					</button>
+				</div>
+
+
+				<div class="Notifications_main_content_element">
+					<h3 class="Notifications_main_content_element_day">Today</h3>
+
+					{% set heading = {'foo': 'Comments','time': '2 mins ago', 'name': 'Sandra ken' , 'symbol' : 'SK'} %}
+					{% include "Includes/Notificationelement.html.twig" with heading%}
+
+					{% set heading = {'foo': 'Requests','time': '3 hrs ago', 'name': 'Sandra ken' , 'symbol' : 'SK'} %}
+					{% include "Includes/Notificationelement.html.twig" with heading%}
+
+					{% set heading = {'foo': 'Requests','time': '3 hrs ago', 'name': 'Ralpha Edwards' , 'symbol' : 'RE'} %}
+					{% include "Includes/Notificationelement.html.twig" with heading%}
+				</div>
+
+				<div class="Notifications_main_content_element">
+					<h3 class="Notifications_main_content_element_day">Yesterday</h3>
+
+					{% set heading = {'foo': 'Comments','time': '2 mins ago', 'name': 'Sandra ken' , 'symbol' : 'SK'} %}
+					{% include "Includes/Notificationelement.html.twig" with heading%}
+
+					{% set heading = {'foo': 'Requests','time': '3 hrs ago', 'name': 'Sandra ken' , 'symbol' : 'SK'} %}
+					{% include "Includes/Notificationelement.html.twig" with heading%}
+
+					{% set heading = {'foo': 'Requests','time': '3 hrs ago', 'name': 'Ralpha Edwards' , 'symbol' : 'RE'} %}
+					{% include "Includes/Notificationelement.html.twig" with heading%}
+				</div>
+
+				<div class="Notifications_main_content_element">
+					<h3 class="Notifications_main_content_element_day">11/12/2022</h3>
+
+					{% set heading = {'foo': 'Comments','time': '2 mins ago', 'name': 'Sandra ken' , 'symbol' : 'SK'} %}
+					{% include "Includes/Notificationelement.html.twig" with heading%}
+
+					{% set heading = {'foo': 'Requests','time': '3 hrs ago', 'name': 'Sandra ken' , 'symbol' : 'SK'} %}
+					{% include "Includes/Notificationelement.html.twig" with heading%}
+
+					{% set heading = {'foo': 'Requests','time': '3 hrs ago', 'name': 'Ralpha Edwards' , 'symbol' : 'RE'} %}
+					{% include "Includes/Notificationelement.html.twig" with heading%}
+				</div>
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+    {% block javascript21 %}
+
+    <script>
+    
+    let selectContainer = document.querySelector(".select-container");
+let select = document.querySelector(".select");
+let input = document.getElementById("input");
+let options = document.querySelectorAll(".select-container .option");
+
+select.onclick = () => {
+    selectContainer.classList.toggle("active1");
+};
+
+options.forEach((e) => {
+    e.addEventListener("click", () => {
+        input.value = e.innerText;
+        selectContainer.classList.remove("active1");
+        options.forEach((e) => {
+            e.classList.remove("selected");
+        });
+        e.classList.add("selected");
+    });
+});
+
+$(document).ready(function(){
+    console.log('hii');
+    // Set div display to none
+    $("#Notifiyme_search").click(function(){
+        $(".Notifications_heading_text_placeholder").css("display", "block");
+        $(".Notifications_heading_text_placeholder").removeClass('Notify_me_search_container');
+
+    });
+    
+    // Set div display to block
+    $("#Notifiyme_search1").click(function(){
+        $(".Notifications_heading_text_placeholder").addClass('Notify_me_search_container');
+        
+    });
+});
+    </script>
+        
+    {% endblock %}
+
+
+{% endblock %}

@@ -1,0 +1,609 @@
+{% extends "default_controller1/index.html.twig" %}
+  {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/requestForm.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
+
+  {% endblock %}
+{% block Form %}
+
+
+
+  {% block maincontent %}
+
+  {% set options = ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'] %}
+    
+  
+
+  <div class="Dashboard_body_main_content"> 
+  <div class="PageCurretPage">
+    {% set breads = ['Home', 'Requests', 'Create Request'] %}
+
+    {% include 'Codilar/Components/currentPage/currentPage.html.twig' with breads %}
+  </div>
+
+  <div class="pageDetails">
+    <strong>Create Request</strong>
+    <div class="actionWrapper">
+      <div class="bubbles">
+        <div class="bubble">
+          <img src="{{ asset('icons/comment.png') }}" alt="icon" />
+        </div>
+        <div class="bubble">
+          <img src="{{ asset('icons/time.svg') }}" alt="icon" />
+        </div>
+        <div class="bubble">
+          <img src="{{ asset('icons/cards.png') }}" alt="icon" />
+        </div>
+      </div>
+      <div class="languageSwitch">
+        <button class="l-btn active">English</button>
+        <button class="l-btn">يبرع</button>
+        <button class="l-btn">Duel</button>
+      </div>
+    </div>
+  </div>
+  <div class="reqInfoBlock">
+    {% include 'Codilar/Components/requestInfo/requestInfo.html.twig' %}
+  </div>
+
+  {# formstart #}
+
+  <form class="formContainer" id="create-request-form">
+    <div class="collapsible">
+      <div class="heading">
+        <span>Title</span>
+
+        <span class="chivro">+</span>
+      </div>
+    </div>
+
+    {# collapsible one #}
+
+    <div class="content">
+      <div class="innerWrapper">
+        <div class="fieldWrapper">
+          <div>
+            <span class="label-txt">Type of Announcement*</span>
+            <select class="form-control" name="drop1">
+              <option value="">select option</option>
+              {% for option in options %}
+                <option value="{{ option }}">{{ option }}</option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <div>
+            <span class="label-txt">Category of Annoucement*</span>
+            <select class="form-control" name="drop2">
+              <option value="">select option</option>
+              {% for option in options %}
+                <option value="{{ option }}">{{ option }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+
+        <div class="fieldLable">
+          <span>Fill in if this request relates to international participation*</span>
+        </div>
+
+        <div class="fieldWrapper">
+          <div>
+            <span class="label-txt">Related Link / Website*</span>
+            <input class="form-input" type="url" placeholder="Placeholder text" name="link1" />
+          </div>
+          <div>
+            <span class="label-txt">Other Entities*</span>
+            <select class="form-control" name="drop3">
+              <option value="">select option</option>
+              {% for option in options %}
+                <option value="{{ option }}">{{ option }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+
+        <div class="fieldLable">
+          <span>Will this have an impact on Abu Dhabi?</span>
+        </div>
+
+        <div class="radioWrapper">
+          <label for="frm-y"><input type="radio" name="rone" value="YES" id="frm-y" />YES</label>
+
+          <label for="frm-n"><input type="radio" name="rone" id="frm-n" value="NO" />NO</label>
+        </div>
+
+        <div class="fieldWrapper">
+          <div>
+            <span class="label-txt">Select Impact</span>
+            <input class="form-input" type="text" placeholder="Placeholder text" name="txt1" />
+          </div>
+          <div>
+            <span class="label-txt">Strategic relevance to Abu Dhabi*</span>
+            <select class="form-control" id="supervisor" name="drop4">
+              <option value="">select option</option>
+              {% for option in options %}
+                <option value="{{ option }}">{{ option }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+
+        <div class="fieldLable">
+          <span>Announcement is related to a member of the Royal Family (HH)*</span>
+        </div>
+
+        <div class="radioWrapper">
+          <label for="frm-1"><input type="radio" name="rtwo" id="frm-1" value="YES" />YES</label>
+
+          <label for="frm-0"><input type="radio" name="rtwo" id="frm-0" value="NO" />NO</label>
+        </div>
+      </div>
+    </div>
+
+    {# collapsible two #}
+
+    <div class="collapsible">
+      <div class="heading">
+        <span>Title</span>
+        <span class="chivro">+</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="innerWrapper">
+        <div class="fieldWrapper">
+          <div>
+            <span class="label-txt">Coverage Occurance*</span>
+            <select class="form-control" name="drop5">
+              <option value="">select option</option>
+              {% for option in options %}
+                <option value="{{ option }}">{{ option }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div>
+            <span class="label-txt">Published Date*</span>
+            <input class="form-input" type="date" placeholder="Placeholder text" name="date1" />
+          </div>
+        </div>
+
+        <div class="fieldLable">
+          <span>Already Published Before?*</span>
+        </div>
+
+        <div class="radioWrapper">
+          <label for="frm-2"><input type="radio" name="rthree" id="frm-2" value="YES" />YES</label>
+
+          <label for="frm-3"><input type="radio" name="rthree" id="frm-3" value="NO" />NO</label>
+        </div>
+
+        <div class="fieldWrapper">
+          <div>
+            <span class="label-txt">Previously Published News*</span>
+            <input class="form-input" type="text" placeholder="Placeholder text" name="txt2" />
+          </div>
+          <div>
+            <span class="label-txt">Target Published Date*</span>
+            <input class="form-input" type="date" placeholder="Placeholder text" name="date2" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {# collapsible three #}
+
+    <div class="collapsible">
+      <div class="heading">
+        <span>Title</span>
+        <span class="chivro">+</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="innerWrapper">
+        <div class="dualinput">
+          <div class="en-input">
+            <span class="label-txt">Main Proposed Headline</span>
+            <input class="form-input" type="text" placeholder="Placeholder text" name="txt3" />
+          </div>
+          <div class="ae-input">
+            <span class="label-txt">عنوان*</span>
+            <input class="form-input" type="text" placeholder="نص العنصر النائب" />
+          </div>
+        </div>
+        <div class="dualinput">
+          <div class="en-input">
+            <span class="label-txt">Subheading</span>
+            <input class="form-input" type="text" placeholder="Placeholder text" name="txt4" />
+          </div>
+          <div class="ae-input">
+            <span class="label-txt">عنوان*</span>
+            <input class="form-input" type="text" placeholder="نص العنصر النائب" />
+          </div>
+        </div>
+        <div class="dualinput">
+          <div class="en-input">
+            <span class="label-txt">Key Messages</span>
+            <input class="form-input" type="text" placeholder="Placeholder text" name="txt5" />
+          </div>
+          <div class="ae-input">
+            <span class="label-txt">عنوان*</span>
+            <input class="form-input" type="text" placeholder="نص العنصر النائب" />
+          </div>
+        </div>
+        <div class="fieldWrapper">
+          <div>
+            <span class="label-txt">Quotes (if any)</span>
+            <input class="form-input" type="text" placeholder="Placeholder text" name="txt6" />
+          </div>
+          <div>
+            <span class="label-txt">Quotes by*</span>
+            <input class="form-input" type="text" placeholder="Placeholder text" name="txt7" />
+          </div>
+        </div>
+
+        <div class="fieldLable">
+          <span>Attachments</span>
+        </div>
+
+        <div class="upload_field">
+          <span class="upload-label">PRL (en)</span>
+          <span class="upload-file-txt">Upload PRL (en) attachment</span>
+          <button class="upload-btn" type="button">Upload</button>
+          <input type="file" class="upload-btn-real"  name="upload" />
+        </div>
+
+        <div class="upload_field">
+          <span class="upload-label">PRL (ar)</span>
+          <span class="upload-file-txt">Upload PRL (ar) attachment</span>
+          <button class="upload-btn" type="button">Upload</button>
+          <input type="file" class="upload-btn-real"  name="upload1" />
+        </div>
+
+        <div class="upload_field">
+          <span class="upload-label">Logos of all entities ( High res)*</span>
+          <span class="upload-file-txt">Upload Imagery (Photography, Videos) attachment</span>
+          <button class="upload-btn" type="button">Upload</button>
+          <input type="file" class="upload-btn-real"  name="upload2" />
+        </div>
+
+        <div class="upload_field">
+          <span class="upload-label">Imagery (Photography, Videos)</span>
+          <span class="upload-file-txt">Upload Imagery (Photography, Videos) attachment</span>
+          <button class="upload-btn" type="button">Upload</button>
+          <input type="file" class="upload-btn-real"  name="upload3" />
+        </div>
+
+        <div class="upload_field">
+          <span class="upload-label">Infographics</span>
+          <span class="upload-file-txt">Upload Infographics attachment</span>
+          <button class="upload-btn" type="button">Upload</button>
+          <input type="file" class="upload-btn-real"  name="upload4" />
+        </div>
+
+        <div class="upload_field">
+          <span class="upload-label">Marketing materials</span>
+          <span class="upload-file-txt">Upload Marketing materials attachment</span>
+          <button class="upload-btn" type="button">Upload</button>
+          <input type="file" class="upload-btn-real"  name="upload5" />
+        </div>
+
+        <div>
+          <span class="label-txt">Website link*</span>
+          <input class="form-input" type="url" placeholder="Placeholder text" name="link2" />
+        </div>
+
+        <div>
+          <span class="label-txt">Remarks</span>
+          <input class="form-input" type="text" placeholder="Placeholder text" />
+        </div>
+
+        <div class="fieldLable">
+          <span>Social Handles*</span>
+        </div>
+
+        <div class="fieldWrapper">
+          <div>
+            <span class="label-txt">Facebook</span>
+            <input class="form-input" type="text" placeholder="Placeholder text" name="link3" />
+          </div>
+
+          <div>
+            <span class="label-txt">Youtube</span>
+            <input class="form-input" type="text" placeholder="Placeholder text" name="link4" />
+          </div>
+        </div>
+
+        <div class="fieldWrapper">
+          <div>
+            <span class="label-txt">Instagram</span>
+            <input class="form-input" type="text" placeholder="Placeholder text" name="link5" />
+          </div>
+
+          <div>
+            <span class="label-txt">Twitter</span>
+            <input class="form-input" type="text" placeholder="Placeholder text" name="link6" />
+          </div>
+        </div>
+
+        <div class="fieldWrapper">
+          <div>
+            <span class="label-txt">Linkedin</span>
+            <input class="form-input" type="text" placeholder="Placeholder text" name="link7" />
+          </div>
+
+          <div>
+            <span class="label-txt">Other</span>
+            <input class="form-input" type="text" placeholder="Placeholder text" name="link8" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {# collapsible four #}
+
+    <div class="collapsible">
+      <div class="heading">
+        <span>Title</span>
+        <span class="chivro">+</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="innerWrapper">
+        <div class="fieldLable">
+          <span>Additional relevant information*</span>
+        </div>
+
+        <div class="radio-lable">
+          <span>Is the news under sponsorship / patronage</span>
+        </div>
+
+        <div class="radioWrapper">
+          <label for="frm-4"><input type="radio" name="rfour" id="frm-4" value="YES" />YES</label>
+
+          <label for="frm-5"><input type="radio" name="rfour" id="frm-5" value="NO" />NO</label>
+        </div>
+
+        <div>
+          <span class="label-txt">Patronage Request Reference</span>
+          <input class="form-input" type="text" placeholder="Placeholder text" />
+        </div>
+
+        <div class="upload_field">
+          <span class="upload-label">Patronage Request*</span>
+          <span class="upload-file-txt">Upload Patronage Request attachment</span>
+          <button class="upload-btn" type="button">Upload</button>
+          <input type="file" class="upload-btn-real" name="upload6" />
+        </div>
+      </div>
+    </div>
+    <div class="submit-cancel">
+      <div class="frm-btns">
+        <input type="button" value="Cancel" class="cancel-btn" />
+        <input type="submit" value="Send Request" class="send-btn" />
+      </div>
+    </div>
+    {# end of form #}
+  </form>
+
+  </div>
+
+
+  {% endblock %}
+
+  
+
+{% endblock %}
+
+{% block javascript1 %}
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"> </script>  
+    <script>
+
+      $(document).ready(function () {
+        var file = $('.upload-btn').val();
+        
+                
+        $('.collapsible').on('click', function () {
+          $(this).toggleClass('round')
+          if ($(this).children('.heading').children('.chivro').text() === '+') {
+            $(this).children('.heading').children('.chivro').text('-')
+          } else {
+            $(this).children('.heading').children('.chivro').text('+')
+          }
+      
+          $(this).next().toggleClass('show')
+        })
+      
+        $('.l-btn').click(function () {
+          $(this).closest('.languageSwitch').find('.l-btn').removeClass('active')
+          $(this).addClass('active')
+        })
+      
+        $('.upload-btn').on('click', function () {
+          $(this).next().click()
+          $(this)
+            .next()
+            .on('change', function () {
+              var file = $(this)
+                .val()
+                .replace(/.*(\/|\\)/, '')
+
+              $(this).prev().prev().text(file)
+              if (!file) {
+                $(this).prev().prev().text('No file choosen')
+              }
+            })
+        })
+      
+        //validation//
+      
+        $('#create-request-form').validate({
+          rules: {
+            drop1: {
+              required: {
+                depends: function (element) {
+                  return $(this).val() == ''
+                }
+              }
+            },
+            drop2: {
+              required: {
+                depends: function (element) {
+                  return $(this).val() == ''
+                }
+              }
+            },
+            drop3: {
+              required: {
+                depends: function (element) {
+                  return $(this).val() == ''
+                }
+              }
+            },
+            drop4: {
+              required: {
+                depends: function (element) {
+                  return $(this).val() == ''
+                }
+              }
+            },
+            drop5: {
+              required: {
+                depends: function (element) {
+                  return $(this).val() == ''
+                }
+              }
+            },
+            txt1: {
+              required: true
+            },
+            txt2: {
+              required: true
+            },
+            txt3: {
+              required: true
+            },
+            txt4: {
+              required: true
+            },
+            txt5: {
+              required: true
+            },
+      
+            txt7: {
+              required: true
+            },
+      
+            link1: {
+              required: true,
+              url: true
+            },
+      
+            link2: {
+              required: true,
+              url: true
+            },
+            link3: {
+              required: true,
+              url: true
+            },
+            link4: {
+              required: true,
+              url: true
+            },
+            link5: {
+              required: true,
+              url: true
+            },
+            link6: {
+              required: true,
+              url: true
+            },
+            link7: {
+              required: true,
+              url: true
+            },
+            link8: {
+              required: true,
+              url: true
+            },
+            date1: {
+              required: true,
+              date: true,
+              dateFormat: true
+            },
+            date2: {
+              required: true,
+              date: true,
+              dateFormat: true
+            },
+            rone: {
+              required: true
+            },
+            rtwo: {
+              required: true
+            },
+            rthree: {
+              required: true
+            },
+            rfour: {
+              required: true
+            },
+             upload: {
+              required: true,
+              extension:'jpeg,png',
+              uploadFile:true,
+              },
+              upload1: {
+              required: true,
+              extension:'jpeg,png',
+              uploadFile:true,
+              },
+              upload2: {
+              required: true,
+              extension:'jpeg,png',
+              uploadFile:true,
+              },
+              upload3: {
+              required: true,
+              extension:'jpeg,png',
+              uploadFile:true,
+              },
+              upload4: {
+              required: true,
+              extension:'jpeg,png',
+              uploadFile:true,
+              },
+              upload5: {
+              required: true,
+              extension:'jpeg,png',
+              uploadFile:true,
+              },
+              upload6: {
+              required: true,
+              extension:'jpeg,png',
+              uploadFile:true,
+              },
+
+          },
+      
+          messages: {
+            txt1: {
+              minlength: 'This field is required!'
+            }
+          },
+          errorPlacement: function (error, element) {
+            if (element.is(':radio')) {
+              error.appendTo(element.parents('.radioWrapper'))
+            } else {
+              error.insertAfter(element)
+            }
+          }
+        })
+      })
+    </script>
+  {% endblock %}

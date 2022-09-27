@@ -1,0 +1,14 @@
+pimcore:
+    documents:
+        doc_types:
+            definitions:
+                4eed39ea-99e8-449d-a8c1-87ebbe5e2634:
+                    name: 'Portal Engine - Data Object Data Pool'
+                    group: 'Portal Engine'
+                    controller: 'Pimcore\Bundle\PortalEngineBundle\Controller\DataPool\DataObjectController::listAction'
+                    template: null
+                    type: page
+                    priority: 0
+                    creationDate: 1661836804
+                    modificationDate: 1661836804
+                    staticGeneratorEnabled: null
